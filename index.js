@@ -1,10 +1,9 @@
-const { default: axios } = require("axios");
-
 console.log("KĀĀlĀĀ script initiated");
+const axios = require('axios').default;
 
 let images = [];
 
-console.log("Meta: ", getMeta())
+console.log("Meta: ", getMeta)
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
