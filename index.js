@@ -1,9 +1,12 @@
 console.log("KĀĀlĀĀ script initiated");
-import axios from "./node_modules/axios/dist/axios.js";
+import fetch from './node_modules/node-fetch/src/index';
 
 let images = [];
 
-console.log("Meta: ", getMeta);
+const response = await fetch('https://github.com/');
+const body = await response.text();
+
+console.log(body);
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
@@ -138,12 +141,12 @@ function elementInViewport(el) {
   );
 }
 
-const getMeta = async () => {
-  const res = await axios.get("https://geolocation-db.com/json/");
-  const meta = navigator.userAgent;
-  // console.log("ip: ", res);
-  return {
-    ipaddress: res.data?.IPv4,
-    useragent: meta,
-  };
-};
+// const getMeta = async () => {
+//   const res = await axios.get("https://geolocation-db.com/json/");
+//   const meta = navigator.userAgent;
+//   // console.log("ip: ", res);
+//   return {
+//     ipaddress: res.data?.IPv4,
+//     useragent: meta,
+//   };
+// };

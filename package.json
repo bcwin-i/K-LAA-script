@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/bcwin-i/K-LAA-script#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "node-fetch": "^3.2.10"
   }
 }
