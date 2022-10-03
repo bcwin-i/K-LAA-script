@@ -1,5 +1,5 @@
 console.log("KĀĀlĀĀ script initiated");
-import fetch from "./node_modules/node-fetch/src/index";
+import fetch from "./node_modules/node-fetch/src/index.js";
 
 let images = [];
 
