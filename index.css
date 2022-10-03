@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  width: max-content;
+  height: max-content;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  padding: 5px 2px;
+  font-size: 13px;
+  z-index: 2;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgIcon {
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+}
