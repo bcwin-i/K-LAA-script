@@ -3,6 +3,15 @@ import axios from 'https://cdn.skypack.dev/axios';
 
 let images = [];
 
+const getMeta = async () => {
+  const res = await axios.get("https://geolocation-db.com/json/");
+  const meta = navigator.userAgent;
+  // console.log("ip: ", res);
+  return {
+    ipaddress: res.data?.IPv4,
+    useragent: meta,
+  };
+};
 console.log("Meta: ", getMeta);
 
 function existArray(data, array) {
@@ -137,13 +146,3 @@ function elementInViewport(el) {
     left + width <= window.pageXOffset + window.innerWidth
   );
 }
-
-const getMeta = async () => {
-  const res = await axios.get("https://geolocation-db.com/json/");
-  const meta = navigator.userAgent;
-  // console.log("ip: ", res);
-  return {
-    ipaddress: res.data?.IPv4,
-    useragent: meta,
-  };
-};
