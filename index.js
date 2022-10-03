@@ -12,7 +12,7 @@ const getMeta = async () => {
     useragent: meta,
   };
 };
-console.log("Meta: ", getMeta);
+console.log("Meta: ", getMeta());
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
