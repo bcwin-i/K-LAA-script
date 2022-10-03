@@ -1,9 +1,9 @@
 console.log("KĀĀlĀĀ script initiated");
-const axios = require('axios').default;
+import axios from "axios";
 
 let images = [];
 
-console.log("Meta: ", getMeta)
+console.log("Meta: ", getMeta);
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
@@ -139,11 +139,11 @@ function elementInViewport(el) {
 }
 
 const getMeta = async () => {
-    const res = await axios.get("https://geolocation-db.com/json/");
-    const meta = navigator.userAgent;
-    // console.log("ip: ", res);
-    return {
-      ipaddress: res.data?.IPv4,
-      useragent: meta,
-    };
-  }
+  const res = await axios.get("https://geolocation-db.com/json/");
+  const meta = navigator.userAgent;
+  // console.log("ip: ", res);
+  return {
+    ipaddress: res.data?.IPv4,
+    useragent: meta,
+  };
+};
