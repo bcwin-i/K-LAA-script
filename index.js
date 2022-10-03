@@ -1,12 +1,16 @@
 console.log("KĀĀlĀĀ script initiated");
-import fetch from './node_modules/node-fetch/src/index';
+import fetch from "./node_modules/node-fetch/src/index";
 
 let images = [];
 
-const response = await fetch('https://github.com/');
-const body = await response.text();
+try {
+  const response = await fetch("https://github.com/");
+  const body = await response.text();
 
-console.log(body);
+  console.log(body);
+} catch (e) {
+  console.error(e);
+}
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
