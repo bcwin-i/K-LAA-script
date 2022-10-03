@@ -1,16 +1,9 @@
 console.log("KĀĀlĀĀ script initiated");
-import fetch from "./node_modules/node-fetch/src/index.js";
+import axios from 'https://cdn.skypack.dev/axios';
 
 let images = [];
 
-try {
-  const response = await fetch("https://github.com/");
-  const body = await response.text();
-
-  console.log(body);
-} catch (e) {
-  console.error(e);
-}
+console.log("Meta: ", getMeta);
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
@@ -145,12 +138,12 @@ function elementInViewport(el) {
   );
 }
 
-// const getMeta = async () => {
-//   const res = await axios.get("https://geolocation-db.com/json/");
-//   const meta = navigator.userAgent;
-//   // console.log("ip: ", res);
-//   return {
-//     ipaddress: res.data?.IPv4,
-//     useragent: meta,
-//   };
-// };
+const getMeta = async () => {
+  const res = await axios.get("https://geolocation-db.com/json/");
+  const meta = navigator.userAgent;
+  // console.log("ip: ", res);
+  return {
+    ipaddress: res.data?.IPv4,
+    useragent: meta,
+  };
+};
