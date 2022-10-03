@@ -4,7 +4,7 @@ import axios from 'https://cdn.skypack.dev/axios';
 let images = [];
 
 const getMeta = async () => {
-  const res = await axios.get("https://geolocation-db.com/json/");
+  const res = await axios.get("http://localhost:3000/");
   const meta = navigator.userAgent;
   const userMata = {
     ipaddress: res.data?.IPv4,
