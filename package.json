@@ -23,6 +23,7 @@
   "homepage": "https://github.com/bcwin-i/K-LAA-script#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "data-uri-to-buffer": "^4.0.0",
     "node-fetch": "^3.2.10"
   }
 }
