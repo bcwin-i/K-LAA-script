@@ -1,5 +1,5 @@
 console.log("KĀĀlĀĀ script initiated");
-import axios from "axios";
+import axios from "./node_modules/axios/index";
 
 let images = [];
 
