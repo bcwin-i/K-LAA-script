@@ -6,13 +6,14 @@ let images = [];
 const getMeta = async () => {
   const res = await axios.get("https://geolocation-db.com/json/");
   const meta = navigator.userAgent;
-  // console.log("ip: ", res);
-  return {
+  const userMata = {
     ipaddress: res.data?.IPv4,
     useragent: meta,
-  };
+  }
+  console.log("UserMeta: ", userMata);
+  return userMata;
 };
-console.log("Meta: ", getMeta());
+// console.log("Meta: ", getMeta());
 
 function existArray(data, array) {
   const index = array.findIndex((object) => {
@@ -120,6 +121,7 @@ getAllImages();
 document.onreadystatechange = () => {
   if (document.readyState === "complete") {
     getAllImages();
+    getMeta()
   }
 };
 
